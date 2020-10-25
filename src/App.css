@@ -1,0 +1,4 @@
+.image {
+  width: calc(15vw + 5rem);
+  max-width: 15rem;
+}
