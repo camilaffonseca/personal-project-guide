@@ -13,12 +13,14 @@ const App = () => {
   return (
     <>
       <Container>
-        <Image className='image' src={pythonLogo} alt='Python Logo' />
-        <Image className='image' src={reactLogo} alt='React Logo' />
-        <Image className='image' src={javascriptLogo} alt='JavaScript Logo' />
+        <Image className='image' draggable={false} src={pythonLogo} alt='Python Logo' />
+        <Image className='image' draggable={false} src={reactLogo} alt='React Logo' />
+        <Image className='image' draggable={false} src={javascriptLogo} alt='JavaScript Logo' />
       </Container>
-      <Title>Guia de Projetos</Title>
-      <Card>sad</Card>
+      <Card>
+        <Title>Guia de Projetos</Title>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, fuga, delectus maiores magnam nisi iure deleniti ut perferendis in modi quae numquam nam? Cumque similique iure, impedit et provident repudiandae!
+      </Card>
     </>
   )
 }
@@ -26,6 +28,10 @@ const App = () => {
 const Image = styled.img`
   width: calc(15vw + 5rem);
   max-width: 15rem;
+
+  &::selection {
+    background: transparent;
+  }
 `
 
 export default App
