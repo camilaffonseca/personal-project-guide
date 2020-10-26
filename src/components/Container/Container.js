@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { DESKTOP_BREAKPOINT } from 'helpers/constants'
+
 const Container = styled.div`
   width: 87vw;
   max-width: 580px;
@@ -7,7 +9,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
 
-  @media (min-width: 750px) {
+  @media (min-width: ${DESKTOP_BREAKPOINT}px) {
     width: calc(53vw + 5rem);
   }
 `

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Title from 'components/Title'
 import Container from 'components/Container'
+import Card from 'components/Card'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
@@ -17,6 +18,7 @@ const App = () => {
         <Image className='image' src={javascriptLogo} alt='JavaScript Logo' />
       </Container>
       <Title>Guia de Projetos</Title>
+      <Card>sad</Card>
     </>
   )
 }
