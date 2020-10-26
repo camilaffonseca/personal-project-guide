@@ -5,21 +5,19 @@ import { TABLET_BREAKPOINT } from 'helpers/constants'
 const GlobalStyle = createGlobalStyle`
   :root {
       --color-background-primary: #24292E;
-      --color-background-secondary: #1B1D23;
+      --color-background-secondary: #31363F;
 
       --color-text-primary: #9da5b4;
       --color-text-secondary: #959da5;
+
+      --color-border-primary: #181a1f;
 
       font-size: 50%;
   }
 
   body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    outline: 0;
     background-color: var(--color-background-primary);
+    font-size: 2rem;
   }
 
   body,
@@ -34,11 +32,12 @@ const GlobalStyle = createGlobalStyle`
     justify-content: flex-start;
   }
 
-  p {
-    font-size: 2.2rem;
-  }
-
   * {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    outline: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--color-text-secondary);
   }
