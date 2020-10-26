@@ -1,9 +1,12 @@
-import React from 'react'
+import styled from 'styled-components'
 
-import './Title.css'
-
-const Title = ({ children }) => {
-  return <p className='title'>{children}</p>
-}
+const Title = styled.p`
+  color: var(--color-text-primary);
+  font-size: 3.9rem;
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  cursor: default;
+`
 
 export default Title
