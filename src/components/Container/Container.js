@@ -1,9 +1,15 @@
-import React from 'react'
+import styled from 'styled-components'
 
-import './Container.css'
+const Container = styled.div`
+  width: 87vw;
+  max-width: 580px;
+  margin: 7.2rem 0;
+  display: flex;
+  justify-content: space-around;
 
-const Container = ({ children }) => {
-  return <div className='container'>{children}</div>
-}
+  @media (min-width: 750px) {
+    width: calc(53vw + 5rem);
+  }
+`
 
 export default Container
