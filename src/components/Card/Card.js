@@ -6,7 +6,7 @@ const Card = styled.div`
   background-color: var(--color-background-secondary);
   border: 1px solid var(--color-border-primary);
   border-radius: 6px;
-  width: 95vw;
+  width: 85vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,7 +15,7 @@ const Card = styled.div`
   padding: 2.6rem;
 
   @media (min-width: ${DESKTOP_BREAKPOINT - 150}px) {
-    width: 85vw;
+    width: 90vw;
   }
   @media (min-width: ${DESKTOP_BREAKPOINT + 300}px) {
     width: 75vw;
