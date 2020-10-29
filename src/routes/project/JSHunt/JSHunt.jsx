@@ -5,10 +5,10 @@ import Card from 'components/Card'
 import Text from 'components/Text'
 
 const JSHunt = () => (
-    <Card>
-        <Title>JSHunt</Title>
-        <Text>JSHunt - description</Text>
-    </Card>
+  <Card>
+    <Title>JSHunt</Title>
+    <Text>JSHunt - description</Text>
+  </Card>
 )
 
 export default JSHunt

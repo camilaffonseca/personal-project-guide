@@ -1,14 +1,14 @@
 import React from 'react'
 
 import Title from 'components/Title'
-import Card from 'components/Card'
 import Text from 'components/Text'
+import { MarginTopCard } from 'components/Card'
 
 const Happy = () => (
-    <Card>
-        <Title>Happy</Title>
-        <Text>Happy - description</Text>
-    </Card>
+  <MarginTopCard>
+    <Title>Happy</Title>
+    <Text>Happy - description</Text>
+  </MarginTopCard>
 )
 
 export default Happy
