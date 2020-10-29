@@ -1,5 +1,14 @@
 import React from 'react'
 
-const ToDos = () => <p>ToDos</p>
+import Title from 'components/Title'
+import Card from 'components/Card'
+import Text from 'components/Text'
+
+const ToDos = () => (
+    <Card>
+        <Title>ToDos</Title>
+        <Text>ToDos - description</Text>
+    </Card>
+)
 
 export default ToDos
