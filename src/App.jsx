@@ -1,37 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-import Title from 'components/Title'
-import Container from 'components/Container'
-import Card from 'components/Card'
+import Home from 'routes/Home'
+import PersonalProjectGuide from 'routes/project/PersonalProjectGuide'
+import LearningPython from 'routes/project/LearningPython'
+import JSHunt from 'routes/project/JSHunt'
+import ReactFundamentals from 'routes/project/ReactFundamentals'
+import Happy from 'routes/project/Happy'
+import ToDos from 'routes/project/ToDos'
+import LearningJS from 'routes/project/LearningJS'
+import MooDevProjects from 'routes/project/MooDevProjects'
 
-import pythonLogo from 'images/python-logo.png'
-import reactLogo from 'images/react-logo.png'
-import javascriptLogo from 'images/javascript-logo.png'
+const App = () => (
+  <Router>
+    <Switch>
+      <Route exact path='/' component={Home} />
 
-const App = () => {
-  return (
-    <>
-      <Container>
-        <Image className='image' draggable={false} src={pythonLogo} alt='Python Logo' />
-        <Image className='image' draggable={false} src={reactLogo} alt='React Logo' />
-        <Image className='image' draggable={false} src={javascriptLogo} alt='JavaScript Logo' />
-      </Container>
-      <Card>
-        <Title>Guia de Projetos</Title>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, fuga, delectus maiores magnam nisi iure deleniti ut perferendis in modi quae numquam nam? Cumque similique iure, impedit et provident repudiandae!
-      </Card>
-    </>
-  )
-}
+      <Route exact path='/project/personal-project-guide' component={PersonalProjectGuide} />
+      <Route exact path='/project/learning-python' component={LearningPython} />
+      <Route exact path='/project/jshunt' component={JSHunt} />
+      <Route exact path='/project/react-fundamentals' component={ReactFundamentals} />
+      <Route exact path='/project/happy' component={Happy} />
+      <Route exact path='/project/to-dos' component={ToDos} />
+      <Route exact path='/project/learning-js' component={LearningJS} />
+      <Route exact path='/project/moodev-projects' component={MooDevProjects} />
 
-const Image = styled.img`
-  width: calc(15vw + 5rem);
-  max-width: 15rem;
-
-  &::selection {
-    background: transparent;
-  }
-`
+      <Redirect to='/' />
+    </Switch>
+  </Router>
+)
 
 export default App
