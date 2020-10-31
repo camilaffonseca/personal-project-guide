@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
@@ -17,16 +17,21 @@ import GlobalStyle from 'styles'
 
 import { darkTheme, lightTheme } from 'theme'
 
+let loadedFirstTime = false
+
 const App = () => {
-  const [currentTheme, setCurrentTheme] = useState('light')
+  const [currentTheme, setCurrentTheme] = useState(localStorage.getItem('currentActiveTheme') || 'light')
 
   const toggleTheme = () => {
-    setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light')
+    loadedFirstTime = true
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+    setCurrentTheme(newTheme)
+    localStorage.setItem('currentActiveTheme', newTheme)
   }
 
   return (
     <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyle />
+      <GlobalStyle loadedFirstTime={loadedFirstTime} />
       <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
       <Router>
         <Switch>

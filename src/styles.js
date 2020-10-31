@@ -26,7 +26,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     color: ${({ theme }) => theme?.colors?.texts?.secondary};
 
-    -o-transition: background-color ${TRANSITION_TIME}s ease-in-out,
+    ${({ loadedFirstTime }) =>
+      loadedFirstTime
+        ? `-o-transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
       color ${TRANSITION_TIME}s ease-in-out;
     -moz-transition: background-color ${TRANSITION_TIME}s ease-in-out,
@@ -37,7 +39,8 @@ const GlobalStyle = createGlobalStyle`
       color ${TRANSITION_TIME}s ease-in-out;
     transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
-      color ${TRANSITION_TIME}s ease-in-out;
+      color ${TRANSITION_TIME}s ease-in-out;`
+        : ''}
   }
 
   *::after,
