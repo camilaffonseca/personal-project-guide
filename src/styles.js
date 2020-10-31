@@ -1,35 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { TABLET_BREAKPOINT } from 'helpers/constants'
+import { TABLET_BREAKPOINT, TRANSITION_TIME } from 'helpers/constants'
 
 const GlobalStyle = createGlobalStyle`
   :root {
-      --color-background-primary: #24292E;
-      --color-background-secondary: #31363F;
-
-      --color-text-primary: #9da5b4;
-      --color-text-secondary: #959da5;
-
-      --color-border-primary: #181a1f;
-
-      font-size: 50%;
+    font-size: 50%;
   }
 
   body {
-    background-color: var(--color-background-primary);
+    background-color: ${({ theme }) => theme?.colors?.backgrounds?.primary};
     font-size: 2rem;
   }
 
   body,
   #root {
     min-height: 100vh;
-  }
-
-  #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
   }
 
   * {
@@ -39,7 +24,28 @@ const GlobalStyle = createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: var(--color-text-secondary);
+    color: ${({ theme }) => theme?.colors?.texts?.secondary};
+
+    ${({ loadedFirstTime }) =>
+      loadedFirstTime
+        ? `-o-transition: background-color ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
+      color ${TRANSITION_TIME}s ease-in-out;
+    -moz-transition: background-color ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
+      color ${TRANSITION_TIME}s ease-in-out;
+    -webkit-transition: background-color ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
+      color ${TRANSITION_TIME}s ease-in-out;
+    transition: background-color ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
+      color ${TRANSITION_TIME}s ease-in-out;`
+        : ''}
+  }
+
+  *::after,
+  *::before {
+    box-sizing: border-box;
   }
 
   @media (max-width: ${TABLET_BREAKPOINT}px) {

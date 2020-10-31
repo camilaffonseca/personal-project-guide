@@ -1,5 +1,6 @@
-import React from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
 
 import Home from 'routes/Home'
 import PersonalProjectGuide from 'routes/project/PersonalProjectGuide'
@@ -10,24 +11,46 @@ import Happy from 'routes/project/Happy'
 import ToDos from 'routes/project/ToDos'
 import LearningJS from 'routes/project/LearningJS'
 import MooDevProjects from 'routes/project/MooDevProjects'
+import ToggleThemeButton from 'components/ToggleThemeButton'
 
-const App = () => (
-  <Router>
-    <Switch>
-      <Route exact path='/' component={Home} />
+import GlobalStyle from 'styles'
 
-      <Route exact path='/project/personal-project-guide' component={PersonalProjectGuide} />
-      <Route exact path='/project/learning-python' component={LearningPython} />
-      <Route exact path='/project/jshunt' component={JSHunt} />
-      <Route exact path='/project/react-fundamentals' component={ReactFundamentals} />
-      <Route exact path='/project/happy' component={Happy} />
-      <Route exact path='/project/to-dos' component={ToDos} />
-      <Route exact path='/project/learning-js' component={LearningJS} />
-      <Route exact path='/project/moodev-projects' component={MooDevProjects} />
+import { darkTheme, lightTheme } from 'theme'
 
-      <Redirect to='/' />
-    </Switch>
-  </Router>
-)
+let loadedFirstTime = false
+
+const App = () => {
+  const [currentTheme, setCurrentTheme] = useState(localStorage.getItem('currentActiveTheme') || 'light')
+
+  const toggleTheme = () => {
+    loadedFirstTime = true
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+    setCurrentTheme(newTheme)
+    localStorage.setItem('currentActiveTheme', newTheme)
+  }
+
+  return (
+    <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle loadedFirstTime={loadedFirstTime} />
+      <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home} />
+
+          <Route exact path='/project/personal-project-guide' component={PersonalProjectGuide} />
+          <Route exact path='/project/learning-python' component={LearningPython} />
+          <Route exact path='/project/jshunt' component={JSHunt} />
+          <Route exact path='/project/react-fundamentals' component={ReactFundamentals} />
+          <Route exact path='/project/happy' component={Happy} />
+          <Route exact path='/project/to-dos' component={ToDos} />
+          <Route exact path='/project/learning-js' component={LearningJS} />
+          <Route exact path='/project/moodev-projects' component={MooDevProjects} />
+
+          <Redirect to='/' />
+        </Switch>
+      </Router>
+    </ThemeProvider>
+  )
+}
 
 export default App

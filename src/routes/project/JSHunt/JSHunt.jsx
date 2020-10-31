@@ -1,14 +1,19 @@
-import React from 'react'
-
+import { MarginTopCard } from 'components/Card'
+import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
-import Card from 'components/Card'
 import Text from 'components/Text'
+import Main from 'components/Main'
+
+import jsHuntImage from 'images/projects/jshunt.gif'
 
 const JSHunt = () => (
-    <Card>
-        <Title>JSHunt</Title>
-        <Text>JSHunt - description</Text>
-    </Card>
+  <Main>
+    <MarginTopCard>
+      <Title>JSHunt</Title>
+      <MarginBottomImage src={jsHuntImage} alt='Project Image' />
+      <Text>JSHunt - description</Text>
+    </MarginTopCard>
+  </Main>
 )
 
 export default JSHunt
