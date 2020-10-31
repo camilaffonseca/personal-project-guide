@@ -1,14 +1,18 @@
 import React from 'react'
 
+import { MarginTopCard } from 'components/Card'
+import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
-import Card from 'components/Card'
 import Text from 'components/Text'
 
+import learningJsImage from 'images/projects/learning-js.gif'
+
 const LearningJS = () => (
-  <Card>
-    <Title>LearningJS</Title>
+  <MarginTopCard>
+    <Title>Learning JS</Title>
+    <MarginBottomImage src={learningJsImage} alt='Project Image' />
     <Text>LearningJS - description</Text>
-  </Card>
+  </MarginTopCard>
 )
 
 export default LearningJS

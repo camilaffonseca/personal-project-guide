@@ -1,14 +1,18 @@
 import React from 'react'
 
+import { MarginTopCard } from 'components/Card'
+import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
-import Card from 'components/Card'
 import Text from 'components/Text'
 
+import toDosImage from 'images/projects/todos.gif'
+
 const ToDos = () => (
-  <Card>
-    <Title>ToDos</Title>
+  <MarginTopCard>
+    <Title>To-dos</Title>
+    <MarginBottomImage src={toDosImage} alt='Project Image' />
     <Text>ToDos - description</Text>
-  </Card>
+  </MarginTopCard>
 )
 
 export default ToDos
