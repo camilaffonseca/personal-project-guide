@@ -10,11 +10,8 @@ import 'sanitize.css'
 import 'sanitize.css/forms.css'
 import 'sanitize.css/typography.css'
 
-import GlobalStyle from 'styles'
-
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
