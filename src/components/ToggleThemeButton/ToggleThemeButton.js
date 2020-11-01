@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import sunIcon from 'images/sun-icon.png'
 import moonIcon from 'images/moon-icon.png'
 
+import { TRANSITION_TIME } from 'helpers/constants'
+
 const ToggleThemeButtonComponent = ({ currentTheme, toggleThemeCallback }) => {
   return (
     <ToggleThemeButton onClick={toggleThemeCallback}>
       {currentTheme === 'light' ? (
-        <ButtonIcon currentTheme={currentTheme} src={moonIcon} alt='Button Icon' />
+        <MoonImage src={moonIcon} alt='Button Icon' />
       ) : (
-        <ButtonIcon currentTheme={currentTheme} src={sunIcon} alt='Button Icon' />
+        <SunImage src={sunIcon} alt='Button Icon' />
       )}
     </ToggleThemeButton>
   )
@@ -28,9 +30,22 @@ const ToggleThemeButton = styled.button`
   }
 `
 
-const ButtonIcon = styled.img`
-  ${({ currentTheme }) => currentTheme === 'dark' && 'filter: invert(100%);'}
+const MoonImage = styled.img`
   width: 30px;
+  animation: opacityInAnimation ${TRANSITION_TIME}s forwards 0s ease;
+
+  @keyframes opacityInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`
+
+const SunImage = styled(MoonImage)`
+  filter: invert(100%);
 `
 
 export default ToggleThemeButtonComponent
