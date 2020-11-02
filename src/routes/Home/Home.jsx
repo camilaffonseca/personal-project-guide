@@ -30,7 +30,12 @@ const Home = () => {
         <Text>
           Bom, vou começar te contando que a tecnologia sempre foi algo curioso pra mim. E claro, como era de se
           esperar, a minha curiosidade só me rendeu sistemas operacionais corrompidos e uma péssima reputação de
-          destruidora de computadores. “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona nada”.
+          destruidora de computadores.
+        </Text>
+        <br />
+        <Text>
+          “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona nada.”
+          &mdash; Mãe
         </Text>
         <br />
         <Text>
@@ -50,6 +55,44 @@ const Home = () => {
           de saber absurdamente mais do que antes, eu ainda sabia muito pouco. O sentimento de que estar envolvida nesse
           meio era algo utópico para mim acabou me segurando muito e não dei continuidade aos estudos por alguns meses.
         </Text>
+        <br />
+        <Text>
+          Conforme fui colocando a cabeça no lugar e entendendo como as coisas funcionam, a frustração por saber muito
+          pouco foi dando espaço a uma euforia pela possibilidade de aprender mais. Claro, as oscilações são
+          inevitáveis, a instabilidade de se jogar em algo novo gera sempre um certo peso pelo excesso de informação, e
+          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez mais como
+          lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
+        </Text>
+        <br />
+        <Text>
+          Há cinco meses comecei a estudar Python. Já tinha tido algum contato com a linguagem no ano anterior, mas não
+          passou de alguns testes simples e teoria, então optei por começar de novo, do zero, de uma forma mais intensa.
+          Comecei pelo básico, e desde então venho estudando a partir de um curso baseado em video-aulas, o qual está
+          quase concluído, e a partir dele, busco me aprofundar em cada detalhe e produzir um conteúdo dedicado e sempre
+          acima do esperado, aplicando conhecimentos adquiridos por meio de outras fontes. Ao final desse curso, tenho
+          pretensão de ainda estudar alguns tópicos pendentes e, posteriormente, iniciar os meus estudos com o framework
+          Django para desenvolvimento web focado em API's restfull, paralelamente à leitura da documentação do Python.
+        </Text>
+        <br />
+        <Text>
+          Há aproximadamente dois meses, paralelamente ao Python, retomei os estudos em JavaScript com maior foco,
+          revisando conceitos básicos e os fundamentos da linguagem. A partir disso, iniciei os meus estudos em React
+          com o objetivo de conhecimentos em front-end com uma biblioteca consolidada e de uma forma que eu possa
+          integrar com as minhas habilidades em Python baseando em PWA's, SPA's e integrações com servidores por meio de
+          API's.
+        </Text>
+        <br />
+        <Text>
+          Sobre este projeto, quero fazer aqui algo como um histórico das aplicações desenvolvidas por mim, contando
+          também um pouquinho sobre o processo em que tudo isso se deu, e também sendo por si própria uma aplicação
+          modelo dos meus estudos em React que tiveram início recentemente.
+        </Text>
+        <br />
+        <Text>
+          Neste compilado de aplicações estará tudo que for desenvolvido por mim, das coisas mais simples às mais
+          complexas, das mais inexperientes às mais estruturadas, algumas inclusive que ainda estão em desenvolvimento.
+          Ao longo do tempo surgirão outras, que também serão incluidas aqui e assim por diante.
+        </Text>
       </Card>
     </Main>
   )
@@ -57,7 +100,11 @@ const Home = () => {
 
 const StyledImage = styled(Image)`
   width: calc(15vw + 5rem);
-  max-width: 15rem;
+  max-width: 27vw;
+
+  @media (min-width: 210px) {
+    max-width: 15rem;
+  }
 `
 
 export default Home
