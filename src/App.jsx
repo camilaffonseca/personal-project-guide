@@ -12,6 +12,7 @@ import ToDos from 'routes/project/ToDos'
 import LearningJS from 'routes/project/LearningJS'
 import MooDevProjects from 'routes/project/MooDevProjects'
 import ToggleThemeButton from 'components/ToggleThemeButton'
+import Navbar from 'components/Navbar'
 
 import GlobalStyle from 'styles'
 
@@ -32,7 +33,9 @@ const App = () => {
   return (
     <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle loadedFirstTime={loadedFirstTime} />
-      <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
+      <Navbar>
+        <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
+      </Navbar>
       <Router>
         <Switch>
           <Route exact path='/' component={Home} />
