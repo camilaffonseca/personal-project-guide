@@ -11,7 +11,7 @@ const Main = styled.main`
 
   @media (min-width: ${DESKTOP_BREAKPOINT + 300}px) {
     max-height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 `
 

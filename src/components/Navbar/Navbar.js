@@ -38,7 +38,7 @@ const NavbarComponent = ({ children, navLinks }) => {
         <MenuIcon onClick={() => setUserClick(true)} src={menuIcon} alt='Menu Icon' />
       </Topbar>
       <Navbar isOpen={userClick}>
-        {children}
+        <StyledChildrenContainer>{children}</StyledChildrenContainer>
         <StyledNavContainer>
           <StyledList>
             {navLinks.map(item => (
@@ -50,6 +50,10 @@ const NavbarComponent = ({ children, navLinks }) => {
             ))}
           </StyledList>
         </StyledNavContainer>
+        <BottomNavButtons>
+          <span>link 1</span>
+          <span>link 2</span>
+        </BottomNavButtons>
       </Navbar>
       <OutClickHandleContainer
         userClick={userClick}
@@ -65,7 +69,6 @@ const Navbar = styled.div`
   height: 100vh;
   width: 30rem;
   max-width: 80vw;
-  overflow-y: auto;
   padding: 1.8rem;
   position: fixed;
   z-index: 2;
@@ -148,8 +151,27 @@ const StyledListItem = styled.li`
   margin: 3rem 0;
 `
 
+const StyledChildrenContainer = styled.div`
+  margin-bottom: 2rem;
+`
+
 const StyledNavContainer = styled.nav`
-  margin-top: 5rem;
+  overflow-y: auto;
+  height: 100%;
+  max-height: calc(100vh - 3.6rem - 4rem - 2rem - 4rem - 1.8rem);
+`
+
+const BottomNavButtons = styled.div`
+  height: 5.8rem;
+  padding-top: 1.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  border-width: 1px 0 0px 0;
+  border-style: solid;
+  border-color: ${({ theme }) => theme?.colors?.borders?.primary};
 `
 
 export default NavbarComponent
