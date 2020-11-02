@@ -82,6 +82,12 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .active-route {
+    ${({ theme }) => theme?.colors?.texts?.primary};
+    opacity: 1;
+    font-weight: 600;
+  }
+
   @media (max-width: ${TABLET_BREAKPOINT}px) {
     :root {
         font-size: 40%;

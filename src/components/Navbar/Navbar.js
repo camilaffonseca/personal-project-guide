@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
+import NavLink from 'components/NavLink'
+
 import menuIcon from 'images/menu-icon.png'
 
 import { DESKTOP_BREAKPOINT, TRANSITION_TIME } from 'helpers/constants'
 
-const NavbarComponent = ({ children }) => {
+const NavbarComponent = ({ children, navLinks }) => {
   let [userClick, setUserClick] = useState(false)
   let [showOutClickHandle, setShowOutClickHandle] = useState(false)
   let [inAnimationDelay, setInAnimationDelay] = useState(false)
@@ -19,7 +21,6 @@ const NavbarComponent = ({ children }) => {
         setInAnimationDelay(true)
       }, TRANSITION_TIME * 100)
       return () => clearTimeout(timer)
-
     } else {
       document.body.style.overflow = 'auto'
       setInAnimationDelay(false)
@@ -36,7 +37,20 @@ const NavbarComponent = ({ children }) => {
       <Topbar>
         <MenuIcon onClick={() => setUserClick(true)} src={menuIcon} alt='Menu Icon' />
       </Topbar>
-      <Navbar isOpen={userClick}>{children}</Navbar>
+      <Navbar isOpen={userClick}>
+        {children}
+        <StyledNavContainer>
+          <StyledList>
+            {navLinks.map(item => (
+              <StyledListItem key={item?.to}>
+                <NavLink onClick={() => setUserClick(false)} exact activeClassName='active-route' to={item?.to}>
+                  {item?.name}
+                </NavLink>
+              </StyledListItem>
+            ))}
+          </StyledList>
+        </StyledNavContainer>
+      </Navbar>
       <OutClickHandleContainer
         userClick={userClick}
         showOutClickHandle={showOutClickHandle}
@@ -51,6 +65,7 @@ const Navbar = styled.div`
   height: 100vh;
   width: 30rem;
   max-width: 80vw;
+  overflow-y: auto;
   padding: 1.8rem;
   position: fixed;
   z-index: 2;
@@ -94,7 +109,7 @@ const Topbar = styled.div`
 const OutClickHandleContainer = styled.div`
   opacity: 0;
   ${({ showOutClickHandle }) => !showOutClickHandle && 'display: none;'}
-  ${({ userClick }) => (userClick && 'display: block;')}
+  ${({ userClick }) => userClick && 'display: block;'}
   ${({ inAnimationDelay }) => (inAnimationDelay ? 'opacity: 1;' : 'opacity: 0;')}
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -123,6 +138,18 @@ const MenuIcon = styled.img`
     width: 4rem;
     height: 3rem;
   }
+`
+
+const StyledList = styled.ul`
+  list-style-type: none;
+`
+
+const StyledListItem = styled.li`
+  margin: 3rem 0;
+`
+
+const StyledNavContainer = styled.nav`
+  margin-top: 5rem;
 `
 
 export default NavbarComponent

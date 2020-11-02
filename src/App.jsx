@@ -30,14 +30,26 @@ const App = () => {
     localStorage.setItem('currentActiveTheme', newTheme)
   }
 
+  const navLinks = [
+    { name: 'Home', to: '/' },
+    { name: 'Personal Project Guide', to: '/project/personal-project-guide' },
+    { name: 'Learning Python', to: '/project/learning-python' },
+    { name: 'JSHunt', to: '/project/jshunt' },
+    { name: 'React Fundamentals', to: '/project/react-fundamentals' },
+    { name: 'Happy', to: '/project/happy' },
+    { name: 'To-dos', to: '/project/to-dos' },
+    { name: 'Learning JS', to: '/project/learning-js' },
+    { name: 'MooDev Projects', to: '/project/moodev-projects' }
+  ]
+
   return (
-    <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyle loadedFirstTime={loadedFirstTime} />
-      <Navbar>
-        <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
-      </Navbar>
-      <Router>
-        <Switch>
+    <Router>
+      <Switch>
+        <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
+          <GlobalStyle loadedFirstTime={loadedFirstTime} />
+          <Navbar navLinks={navLinks}>
+            <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
+          </Navbar>
           <Route exact path='/' component={Home} />
 
           <Route exact path='/project/personal-project-guide' component={PersonalProjectGuide} />
@@ -50,9 +62,9 @@ const App = () => {
           <Route exact path='/project/moodev-projects' component={MooDevProjects} />
 
           <Redirect to='/' />
-        </Switch>
-      </Router>
-    </ThemeProvider>
+        </ThemeProvider>
+      </Switch>
+    </Router>
   )
 }
 
