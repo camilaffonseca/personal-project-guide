@@ -10,7 +10,11 @@ const darkTheme = {
     },
     borders: {
       primary: '#181a1f'
-    }
+    },
+    scroll: {
+      primary: '#3f454c',
+      secondary: '#1a2026'
+    },
   }
 }
 
@@ -26,7 +30,11 @@ const lightTheme = {
     },
     borders: {
       primary: '#e1e4e8'
-    }
+    },
+    scroll: {
+      primary: '#e1e4e8',
+      secondary: '#6b747f'
+    },
   }
 }
 

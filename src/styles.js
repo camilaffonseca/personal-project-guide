@@ -7,6 +7,17 @@ const GlobalStyle = createGlobalStyle`
     font-size: 50%;
   }
 
+  ::-webkit-scrollbar {
+    width:12px;
+    background: ${({ theme }) => theme?.colors?.scroll?.primary};
+  }
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme?.colors?.scroll?.primary};
+  }
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme?.colors?.scroll?.secondary};
+  }
+
   body {
     background-color: ${({ theme }) => theme?.colors?.backgrounds?.primary};
     font-size: 2rem;
@@ -15,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
   body,
   #root {
     min-height: 100vh;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: row;
   }
 
   * {
@@ -28,19 +44,37 @@ const GlobalStyle = createGlobalStyle`
 
     ${({ loadedFirstTime }) =>
       loadedFirstTime
-        ? `-o-transition: background-color ${TRANSITION_TIME}s ease-in-out,
+        ? `
+    -o-transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
-      color ${TRANSITION_TIME}s ease-in-out;
+      color ${TRANSITION_TIME}s ease-in-out,
+      transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
     -moz-transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
-      color ${TRANSITION_TIME}s ease-in-out;
+      color ${TRANSITION_TIME}s ease-in-out,
+      transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
     -webkit-transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
-      color ${TRANSITION_TIME}s ease-in-out;
+      color ${TRANSITION_TIME}s ease-in-out,
+      transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
     transition: background-color ${TRANSITION_TIME}s ease-in-out,
       border-color ${TRANSITION_TIME}s ease-in-out,
-      color ${TRANSITION_TIME}s ease-in-out;`
-        : ''}
+      color ${TRANSITION_TIME}s ease-in-out,
+      transform ${TRANSITION_TIME - 0.2}s ease,
+      opacity ${TRANSITION_TIME}s ease`
+        : `
+    -o-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
+    -moz-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
+    -webkit-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      opacity ${TRANSITION_TIME}s ease-in-out;
+    transition: transform ${TRANSITION_TIME - 0.2}s ease,
+      opacity ${TRANSITION_TIME}s ease;
+    `}
   }
 
   *::after,
