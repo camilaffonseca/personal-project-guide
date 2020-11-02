@@ -6,6 +6,7 @@ import Card from 'components/Card'
 import Text from 'components/Text'
 import Image from 'components/Image'
 import Main from 'components/Main'
+import Subtitle from 'components/Subtitle'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
@@ -21,6 +22,7 @@ const Home = () => {
       </Container>
       <Card>
         <Title>Guia de Projetos</Title>
+        <Subtitle>Teste de subtitulo</Subtitle>
         <Text>
           Não sei exatamente como tu vieste parar aqui, em que dia estamos ou que horas são agora. Mas já que estás
           aqui, faz um café e perde alguns minutos aqui comigo que nas próximas linhas eu vou te contar um pouco sobre
