@@ -9,9 +9,9 @@ const ToggleThemeButtonComponent = ({ currentTheme, toggleThemeCallback }) => {
   return (
     <ToggleThemeButton onClick={toggleThemeCallback}>
       {currentTheme === 'light' ? (
-        <MoonImage src={moonIcon} alt='Button Icon' />
+        <MoonImage draggable={false} src={moonIcon} alt='Button Icon' />
       ) : (
-        <SunImage src={sunIcon} alt='Button Icon' />
+        <SunImage draggable={false} src={sunIcon} alt='Button Icon' />
       )}
     </ToggleThemeButton>
   )
@@ -24,6 +24,10 @@ const ToggleThemeButton = styled.button`
   padding: 0;
   -webkit-tap-highlight-color: transparent;
 
+  &::selection {
+    background: transparent;
+  }
+
   &:hover,
   &:active {
     border: none;
@@ -31,8 +35,12 @@ const ToggleThemeButton = styled.button`
 `
 
 const MoonImage = styled.img`
-  width: 30px;
+  width: 4rem;
   animation: opacityInAnimation ${TRANSITION_TIME}s forwards 0s ease;
+
+  &::selection {
+    background: transparent;
+  }
 
   @keyframes opacityInAnimation {
     0% {
