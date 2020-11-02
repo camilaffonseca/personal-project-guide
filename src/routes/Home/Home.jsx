@@ -6,7 +6,6 @@ import Card from 'components/Card'
 import Text from 'components/Text'
 import Image from 'components/Image'
 import Main from 'components/Main'
-import Subtitle from 'components/Subtitle'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
@@ -22,7 +21,6 @@ const Home = () => {
       </Container>
       <Card>
         <Title>Guia de Projetos</Title>
-        <Subtitle>Teste de subtitulo</Subtitle>
         <Text>
           Não sei exatamente como tu vieste parar aqui, em que dia estamos ou que horas são agora. Mas já que estás
           aqui, faz um café e perde alguns minutos aqui comigo que nas próximas linhas eu vou te contar um pouco sobre
@@ -62,8 +60,8 @@ const Home = () => {
           Conforme fui colocando a cabeça no lugar e entendendo como as coisas funcionam, a frustração por saber muito
           pouco foi dando espaço a uma euforia pela possibilidade de aprender mais. Claro, as oscilações são
           inevitáveis, a instabilidade de se jogar em algo novo gera sempre um certo peso pelo excesso de informação, e
-          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez mais como
-          lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
+          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez
+          mais como lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
         </Text>
         <br />
         <Text>
