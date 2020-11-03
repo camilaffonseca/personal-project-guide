@@ -21,7 +21,7 @@ const TheEnd = () => (
       <StyledText>Qualquer coisa entre contato pelos canais abaixo.</StyledText>
 
       <BottomContainer>
-        <ExternalLink href='#'>GitHub</ExternalLink>
+        <ExternalLink href='https://github.com/camilaffonseca'>GitHub</ExternalLink>
         <ExternalLink href='mailto:camilafonseca.ang7@gmail.com'>Email</ExternalLink>
       </BottomContainer>
     </MarginTopCard>
