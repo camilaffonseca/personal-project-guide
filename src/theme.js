@@ -1,4 +1,5 @@
 const darkTheme = {
+  current: 'dark',
   colors: {
     backgrounds: {
       primary: '#24292e',
@@ -20,6 +21,7 @@ const darkTheme = {
 }
 
 const lightTheme = {
+  current: 'light',
   colors: {
     backgrounds: {
       primary: '#fafbfc',

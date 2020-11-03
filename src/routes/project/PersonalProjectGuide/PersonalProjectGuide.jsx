@@ -42,8 +42,9 @@ const PersonalProjectGuide = () => (
         maior compatibilidade com alguns browsers. A próxima biblioteca utilizada é a react-router-dom e basicamente
         implementa o sistema de roteamento das páginas. Uma outra biblioteca utilizada é a sanitize.css que basicamente
         previne inconsistências na visualização da aplicação. A biblioteca styled-components implementa a utilização de
-        css-in-js e o sistema dos temas, facilitando o desenvolvimento de apicações responsivas e dinâmicas. E por fim,
-        a react-helmet que auxilia no tratamento de títulos das páginas.
+        css-in-js e o sistema dos temas, facilitando o desenvolvimento de apicações responsivas e dinâmicas. A
+        biblioteca react-syntax-highlighter está sendo utilizada para a decoração na última página e, por fim, a
+        react-helmet que auxilia no tratamento de títulos das páginas.
       </Text>
       <BottomContainer>
         <ExternalLink msg='Você já está aqui :)' href='https://personal-project-guide.netlify.app'>
