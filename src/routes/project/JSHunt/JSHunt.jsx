@@ -4,6 +4,8 @@ import Title from 'components/Title'
 import Subtitle from 'components/Subtitle'
 import Text from 'components/Text'
 import Main from 'components/Main'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import jsHuntImage from 'images/projects/jshunt.gif'
 
@@ -29,6 +31,10 @@ const JSHunt = () => (
         absorver a base da contrução server-side em Node e pela importância do JavaScript no desenvolvimento hoje em
         dia.
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://jshunt-cam.netlify.app'>Visualização em produção</ExternalLink>
+        <ExternalLink href='https://github.com/camilaffonseca/jshunt-front'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

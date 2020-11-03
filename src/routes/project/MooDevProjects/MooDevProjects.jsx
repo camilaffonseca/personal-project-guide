@@ -6,6 +6,8 @@ import Title from 'components/Title'
 import Text from 'components/Text'
 import Main from 'components/Main'
 import Subtitle from 'components/Subtitle'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import mooDevProjectsGameImage from 'images/projects/moodev-projects-game.gif'
 import mooDevProjectsWebLearningImage from 'images/projects/moodev-projects-web-learning.gif'
@@ -24,8 +26,8 @@ const MooDevProjects = () => (
       </Text>
       <br />
       <Text>
-        Estes projetos estão aqui para mostrar um pouco de como foi o início desse processo todo, as minhas
-        habilidades ainda muito limitadas no início e a minha evolução durante este processo.
+        Estes projetos estão aqui para mostrar um pouco de como foi o início desse processo todo, as minhas habilidades
+        ainda muito limitadas no início e a minha evolução durante este processo.
       </Text>
 
       <StyledSubtitle>JavaScript e Canvas</StyledSubtitle>
@@ -36,12 +38,18 @@ const MooDevProjects = () => (
         lógica de código, e não o resultado final. Este jogo baseia-se em renderização em canvas, uma tecnologia muito
         interessante no desenvolvimento gráfico de aplicações Web.
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/jogo-javascript'>Repositório no Github</ExternalLink>
+      </BottomContainer>
 
       <StyledSubtitle>Aprendendo Fundamentos Web</StyledSubtitle>
       <MarginBottomTopImage src={mooDevProjectsWebLearningImage} alt='Project Image' />
       <Text>
         Três simples páginas onde iniciei os meus estudos em JavaScript, manipulação de elementos HTML e estilos.
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/estudosweb'>Repositório no Github</ExternalLink>
+      </BottomContainer>
 
       <StyledSubtitle>Primeiro Framework!</StyledSubtitle>
       <MarginBottomTopImage src={mooDevProjectsBootstrapTestImage} alt='Project Image' />
@@ -49,6 +57,9 @@ const MooDevProjects = () => (
         Iniciei a utilização de bibliotecas e frameworks, como Bootstrap Css neste projeto. Aprendi a trabalhar com
         classes e estilização básica no geral.
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/bootstrap-test'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

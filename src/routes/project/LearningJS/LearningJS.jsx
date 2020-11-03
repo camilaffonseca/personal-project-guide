@@ -4,6 +4,8 @@ import Title from 'components/Title'
 import Text from 'components/Text'
 import Main from 'components/Main'
 import Subtitle from 'components/Subtitle'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import learningJsImage from 'images/projects/learning-js.gif'
 
@@ -19,6 +21,9 @@ const LearningJS = () => (
         Neste momento os exercícios são reescritas de aplicações anteriormente implementadas em Python, e que são de
         funcionalidade interessante quando se trata de JavaScript. Ainda há muito por vir por aqui {':)'}
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/todos-app'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

@@ -3,6 +3,8 @@ import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
 import Text from 'components/Text'
 import Main from 'components/Main'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import personalProjectGuideImage from 'images/projects/personal-project-guide.gif'
 
@@ -35,6 +37,14 @@ const PersonalProjectGuide = () => (
         previne inconsistências na visualização da aplicação. E por fim, a styled-components que implementa a utilização
         de css-in-js e o sistema dos temas, facilitando o desenvolvimento de apicações responsivas e dinâmicas.
       </Text>
+      <BottomContainer>
+        <ExternalLink msg='Você já está aqui :)' href='https://personal-project-guide.netlify.app'>
+          Visualização em produção
+        </ExternalLink>
+        <ExternalLink href='https://github.com/camilaffonseca/personal-project-guide'>
+          Repositório no Github
+        </ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

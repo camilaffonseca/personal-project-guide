@@ -4,6 +4,8 @@ import Title from 'components/Title'
 import Text from 'components/Text'
 import Subtitle from 'components/Subtitle'
 import Main from 'components/Main'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import reactFundamentalsImage from 'images/projects/react-fundamentals.gif'
 
@@ -24,6 +26,10 @@ const ReactFundamentals = () => (
         Ao longo do percurso sobre estas tecnologias, serão produzidas novas aplicações com base em projetos deste curso
         que também serão incluídas neste compilado.
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://react-fundamentals-course.netlify.app'>Visualização em produção</ExternalLink>
+        <ExternalLink href='https://github.com/camilaffonseca/react-fundamentals'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

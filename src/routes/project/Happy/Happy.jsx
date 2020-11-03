@@ -4,6 +4,8 @@ import Title from 'components/Title'
 import Text from 'components/Text'
 import Main from 'components/Main'
 import Subtitle from 'components/Subtitle'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import happyImage from 'images/projects/happy.png'
 
@@ -25,6 +27,9 @@ const Happy = () => (
         comunidade, e por conta disso, o seu entendimento se mostra de total relevância neste vasto oceano de
         tecnologias &#128522;
       </Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/happy-front'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )

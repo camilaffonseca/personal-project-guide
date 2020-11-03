@@ -3,6 +3,8 @@ import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
 import Text from 'components/Text'
 import Main from 'components/Main'
+import BottomContainer from 'components/BottomContainer'
+import ExternalLink from 'components/ExternalLink'
 
 import learningPythonImage from 'images/projects/learning-python.gif'
 
@@ -20,7 +22,9 @@ const LearningPython = () => (
         recursos da linguagem a fim de potencializar o meu aprendizado e a qualidade da aplicação final &#128516;
       </Text>
       <br />
-      <Text></Text>
+      <BottomContainer>
+        <ExternalLink href='https://github.com/camilaffonseca/Learning_Python'>Repositório no Github</ExternalLink>
+      </BottomContainer>
     </MarginTopCard>
   </Main>
 )
