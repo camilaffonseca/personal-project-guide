@@ -7,6 +7,7 @@ import Card from 'components/Card'
 import Text from 'components/Text'
 import Image from 'components/Image'
 import Main from 'components/Main'
+import Subtitle from 'components/Subtitle'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
@@ -41,7 +42,7 @@ const Home = () => {
           “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona nada.”
           &mdash; Mãe
         </Text>
-        <br />
+        <Subtitle>O início de tudo</Subtitle>
         <Text>
           Só comecei a fazer algo útil com essa curiosidade quando, com um interesse absurdo no assunto e um total de
           <span style={{ fontWeight: 600, fontSize: '2.03rem' }}> zero</span> conhecimentos, caí de paraquedas no
@@ -67,7 +68,7 @@ const Home = () => {
           estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez
           mais como lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
         </Text>
-        <br />
+        <Subtitle>Hora de inovar</Subtitle>
         <Text>
           Há cinco meses comecei a estudar Python. Já tinha tido algum contato com a linguagem no ano anterior, mas não
           passou de alguns testes simples e teoria, então optei por começar de novo, do zero, de uma forma mais intensa.
@@ -85,7 +86,7 @@ const Home = () => {
           integrar com as minhas habilidades em Python baseando em PWA's, SPA's e integrações com servidores por meio de
           API's.
         </Text>
-        <br />
+        <Subtitle>Objetivo</Subtitle>
         <Text>
           Sobre este projeto, quero fazer aqui algo como um histórico das aplicações desenvolvidas por mim, contando
           também um pouquinho sobre o processo em que tudo isso se deu, e também sendo por si própria uma aplicação

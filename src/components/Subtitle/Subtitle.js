@@ -6,7 +6,7 @@ const Subtitle = styled.p`
   color: ${({ theme }) => theme?.colors?.text?.primary};
   width: 100%;
   text-align: left;
-  margin: 1.9rem 0;
+  margin: 4rem 0 1.9rem 0;
   font-size: 2.33rem;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;

@@ -7,6 +7,7 @@ import Text from 'components/Text'
 import Main from 'components/Main'
 import BottomContainer from 'components/BottomContainer'
 import ExternalLink from 'components/ExternalLink'
+import Subtitle from 'components/Subtitle'
 
 import learningPythonImage from 'images/projects/learning-python.gif'
 
@@ -18,6 +19,7 @@ const LearningPython = () => (
     <MarginTopCard>
       <Title>Learning Python</Title>
       <MarginBottomImage src={learningPythonImage} alt='Project Image' />
+      <Subtitle>Minha linguagem primária</Subtitle>
       <Text>
         O Learning Python é basicamente um compilado de aplicações desenvolvidas com base nos desafios propostos pelo
         curso de Python do canal do YouTube Curso em Vídeo, onde aplico, além do conteúdo absorvido do curso,
