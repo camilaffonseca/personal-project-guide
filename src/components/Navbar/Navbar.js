@@ -101,7 +101,7 @@ const Navbar = styled.div`
   height: 100vh;
   width: 30rem;
   max-width: 80vw;
-  padding: 1.8rem;
+  padding: 1.8rem 0 1.8rem 1.8rem;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -189,6 +189,7 @@ const StyledChildrenContainer = styled.div`
 
 const StyledNavContainer = styled.nav`
   overflow-y: auto;
+  padding-right: 1.8rem;
   height: 100%;
   max-height: calc(100vh - 3.6rem - 4rem - 2rem - 4rem - 1.8rem);
 `
