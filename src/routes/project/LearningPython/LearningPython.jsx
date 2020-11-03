@@ -17,7 +17,7 @@ const LearningPython = () => (
         conhecimentos um pouco mais avançados adquiridos por meio de outros materiais. Como o curso é basicamente uma
         introdução à linguagem, constantemente vejo necessidade de ampliar os meus conhecimentos e desenvolver soluções
         de nível superior ao proposto pelo curso, como arquitetura de software, implementação de novos métodos e
-        recursos da linguagem afim de potencializar o meu aprendizado e a qualidade da aplicação final &#128516;
+        recursos da linguagem a fim de potencializar o meu aprendizado e a qualidade da aplicação final &#128516;
       </Text>
       <br />
       <Text></Text>

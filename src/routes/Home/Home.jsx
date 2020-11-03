@@ -91,7 +91,7 @@ const Home = () => {
         <Text>
           Neste compilado de aplicações estará tudo que for desenvolvido por mim, das coisas mais simples às mais
           complexas, das mais inexperientes às mais estruturadas, algumas inclusive que ainda estão em desenvolvimento.
-          Ao longo do tempo surgirão outras, que também serão incluidas aqui e assim por diante.
+          Ao longo do tempo surgirão outras, que também serão incluídas aqui e assim por diante.
         </Text>
       </Card>
     </Main>
