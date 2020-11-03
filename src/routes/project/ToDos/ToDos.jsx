@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { MarginTopCard } from 'components/Card'
 import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
@@ -11,6 +13,9 @@ import toDosImage from 'images/projects/todos.gif'
 
 const ToDos = () => (
   <Main>
+    <Helmet>
+      <title>To-dos</title>
+    </Helmet>
     <MarginTopCard>
       <Title>To-dos</Title>
       <MarginBottomImage src={toDosImage} alt='Project Image' />

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 
 import { MarginTopCard } from 'components/Card'
@@ -15,6 +16,9 @@ import mooDevProjectsBootstrapTestImage from 'images/projects/moodev-projects-bo
 
 const MooDevProjects = () => (
   <Main>
+    <Helmet>
+      <title>MooDev Projects</title>
+    </Helmet>
     <MarginTopCard>
       <Title>MooDev Projects</Title>
 

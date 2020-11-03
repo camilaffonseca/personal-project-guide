@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
 
 import Title from 'components/Title'
 import Container from 'components/Container'
@@ -14,6 +15,9 @@ import javascriptLogo from 'images/javascript-logo.png'
 const Home = () => {
   return (
     <Main>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Container>
         <StyledImage src={pythonLogo} alt='Python Logo' />
         <StyledImage src={reactLogo} alt='React Logo' />

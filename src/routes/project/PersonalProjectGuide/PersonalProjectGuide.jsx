@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { MarginTopCard } from 'components/Card'
 import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
@@ -10,6 +12,9 @@ import personalProjectGuideImage from 'images/projects/personal-project-guide.gi
 
 const PersonalProjectGuide = () => (
   <Main>
+    <Helmet>
+      <title>Personal Project Guide</title>
+    </Helmet>
     <MarginTopCard>
       <Title>Personal Project Guide</Title>
       <MarginBottomImage src={personalProjectGuideImage} alt='Project Image' />

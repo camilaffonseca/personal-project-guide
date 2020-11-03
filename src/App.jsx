@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
@@ -11,6 +13,8 @@ import Happy from 'routes/project/Happy'
 import ToDos from 'routes/project/ToDos'
 import LearningJS from 'routes/project/LearningJS'
 import MooDevProjects from 'routes/project/MooDevProjects'
+import TheEnd from 'routes/TheEnd'
+
 import ToggleThemeButton from 'components/ToggleThemeButton'
 import Navbar from 'components/Navbar'
 
@@ -42,11 +46,20 @@ const App = () => {
     { name: 'MooDev Projects', to: '/project/moodev-projects' }
   ]
 
+  navLinks.push({ name: 'The End', to: '/the-end' })
+
   return (
     <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
+      <Helmet titleTemplate='Guia de Projetos | %s'>
+        {currentTheme === 'dark' ? (
+          <meta name='theme-color' content='#1B1D23' />
+        ) : (
+          <meta name='theme-color' content='#fafbfc' />
+        )}
+      </Helmet>
       <GlobalStyle loadedFirstTime={loadedFirstTime} />
       <Router>
-        <Navbar navLinks={navLinks}>
+        <Navbar navLinks={navLinks} currentTheme={currentTheme}>
           <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
         </Navbar>
         <Switch>
@@ -58,6 +71,7 @@ const App = () => {
           <Route exact path='/project/to-dos' component={ToDos} />
           <Route exact path='/project/learning-js' component={LearningJS} />
           <Route exact path='/project/moodev-projects' component={MooDevProjects} />
+          <Route exact path='/the-end' component={TheEnd} />
           <Route exact path='/' component={Home} />
           <Redirect to='/' />
         </Switch>

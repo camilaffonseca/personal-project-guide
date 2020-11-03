@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { TABLET_BREAKPOINT } from 'helpers/constants'
+
 const ExternalLinkComponent = ({ children, href, msg, ...props }) => (
   <ExternalLink rel='noopener noreferrer' href={href} target='_blank' {...props}>
     <span>{children}</span>
@@ -15,7 +17,7 @@ const ExternalLink = styled.a`
   border-width: 1px;
   padding: 1rem;
   margin: 1rem 0;
-  min-width: 30rem;
+  width: 60vw;
   text-align: center;
   border-style: solid;
   border-color: ${({ theme }) => theme?.colors?.borders?.primary};
@@ -28,6 +30,10 @@ const ExternalLink = styled.a`
   &:active,
   &:visited {
     color: ${({ theme }) => theme?.colors?.texts?.primary};
+  }
+
+  @media (min-width: ${TABLET_BREAKPOINT}px) {
+    max-width: 30rem;
   }
 `
 

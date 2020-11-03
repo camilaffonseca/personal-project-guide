@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { MarginTopCard } from 'components/Card'
 import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
@@ -11,6 +13,9 @@ import jsHuntImage from 'images/projects/jshunt.gif'
 
 const JSHunt = () => (
   <Main>
+    <Helmet>
+      <title>JSHunt</title>
+    </Helmet>
     <MarginTopCard>
       <Title>JSHunt</Title>
       <MarginBottomImage src={jsHuntImage} alt='Project Image' />

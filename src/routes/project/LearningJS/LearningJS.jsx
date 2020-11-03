@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { MarginTopCard } from 'components/Card'
 import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
@@ -11,6 +13,9 @@ import learningJsImage from 'images/projects/learning-js.gif'
 
 const LearningJS = () => (
   <Main>
+    <Helmet>
+      <title>Learning JS</title>
+    </Helmet>
     <MarginTopCard>
       <Title>Learning JS</Title>
       <MarginBottomImage src={learningJsImage} alt='Project Image' />

@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet'
+
 import { MarginTopCard } from 'components/Card'
 import { MarginBottomImage } from 'components/Image'
 import Title from 'components/Title'
@@ -11,6 +13,9 @@ import happyImage from 'images/projects/happy.png'
 
 const Happy = () => (
   <Main>
+    <Helmet>
+      <title>Happy</title>
+    </Helmet>
     <MarginTopCard>
       <Title>Happy</Title>
       <MarginBottomImage src={happyImage} alt='Project Image' />

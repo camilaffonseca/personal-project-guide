@@ -1,16 +1,28 @@
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { useLocation, Link } from 'react-router-dom'
 
 import NavLink from 'components/NavLink'
 
 import menuIcon from 'images/menu-icon.png'
+import arrowLeftIcon from 'images/arrow-left-icon.png'
+import arrowRightIcon from 'images/arrow-right-icon.png'
 
 import { DESKTOP_BREAKPOINT, TRANSITION_TIME } from 'helpers/constants'
 
-const NavbarComponent = ({ children, navLinks }) => {
-  let [userClick, setUserClick] = useState(false)
-  let [showOutClickHandle, setShowOutClickHandle] = useState(false)
-  let [inAnimationDelay, setInAnimationDelay] = useState(false)
+const NavbarComponent = ({ children, navLinks, currentTheme }) => {
+  const [userClick, setUserClick] = useState(false)
+  const [showOutClickHandle, setShowOutClickHandle] = useState(false)
+  const [inAnimationDelay, setInAnimationDelay] = useState(false)
+  const location = useLocation()
+
+  const linkReducer = (accumulator, currentValue) => {
+    const accumulatorList = accumulator
+    accumulatorList.push(currentValue?.to)
+    return accumulatorList
+  }
+
+  const linksRoutes = navLinks.reduce(linkReducer, [])
 
   useEffect(() => {
     if (userClick) {
@@ -51,8 +63,28 @@ const NavbarComponent = ({ children, navLinks }) => {
           </StyledList>
         </StyledNavContainer>
         <BottomNavButtons>
-          <span>Prev</span>
-          <span>Next</span>
+          <StyledLink to={linksRoutes[linksRoutes.indexOf(location?.pathname) - 1] || '#'}>
+            <BottomButtonImage
+              currentTheme={currentTheme}
+              currentPath={location?.pathname}
+              navLinks={navLinks}
+              prev
+              src={arrowLeftIcon}
+              draggable={false}
+              alt='Bottom Button Image Prev'
+            />
+          </StyledLink>
+          <StyledLink to={linksRoutes[linksRoutes.indexOf(location?.pathname) + 1] || '#'}>
+            <BottomButtonImage
+              currentTheme={currentTheme}
+              currentPath={location?.pathname}
+              navLinks={navLinks}
+              next
+              src={arrowRightIcon}
+              draggable={false}
+              alt='Bottom Button Image Next'
+            />
+          </StyledLink>
         </BottomNavButtons>
       </Navbar>
       <OutClickHandleContainer
@@ -172,6 +204,37 @@ const BottomNavButtons = styled.div`
   border-width: 1px 0 0px 0;
   border-style: solid;
   border-color: ${({ theme }) => theme?.colors?.borders?.primary};
+`
+
+const BottomButtonImage = styled.img`
+  cursor: pointer;
+  ${({ currentTheme }) => (currentTheme === 'light' ? 'opacity: 0.6;' : '')}
+  ${({ currentPath, navLinks, next, prev }) => {
+    const firstLink = navLinks[0]?.to
+    const lastLink = navLinks[navLinks.length - 1]?.to
+
+    const disabled = 'opacity: 0.3;cursor: default;'
+    if (prev) {
+      if (currentPath === firstLink) {
+        return disabled
+      }
+    }
+    if (next) {
+      if (currentPath === lastLink) {
+        return disabled
+      }
+    }
+  }}
+
+
+  width: 3rem;
+  &::selection {
+    background: transparent;
+  }
+`
+
+const StyledLink = styled(Link)`
+  cursor: default;
 `
 
 export default NavbarComponent
