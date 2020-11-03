@@ -43,15 +43,13 @@ const App = () => {
   ]
 
   return (
-    <Router>
-      <Switch>
-        <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
-          <GlobalStyle loadedFirstTime={loadedFirstTime} />
-          <Navbar navLinks={navLinks}>
-            <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
-          </Navbar>
-          <Route exact path='/' component={Home} />
-
+    <ThemeProvider theme={currentTheme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle loadedFirstTime={loadedFirstTime} />
+      <Router>
+        <Navbar navLinks={navLinks}>
+          <ToggleThemeButton currentTheme={currentTheme} toggleThemeCallback={toggleTheme} />
+        </Navbar>
+        <Switch>
           <Route exact path='/project/personal-project-guide' component={PersonalProjectGuide} />
           <Route exact path='/project/learning-python' component={LearningPython} />
           <Route exact path='/project/jshunt' component={JSHunt} />
@@ -60,11 +58,11 @@ const App = () => {
           <Route exact path='/project/to-dos' component={ToDos} />
           <Route exact path='/project/learning-js' component={LearningJS} />
           <Route exact path='/project/moodev-projects' component={MooDevProjects} />
-
+          <Route exact path='/' component={Home} />
           <Redirect to='/' />
-        </ThemeProvider>
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   )
 }
 
