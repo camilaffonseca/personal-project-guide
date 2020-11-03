@@ -51,8 +51,8 @@ const NavbarComponent = ({ children, navLinks }) => {
           </StyledList>
         </StyledNavContainer>
         <BottomNavButtons>
-          <span>link 1</span>
-          <span>link 2</span>
+          <span>Prev</span>
+          <span>Next</span>
         </BottomNavButtons>
       </Navbar>
       <OutClickHandleContainer

@@ -6,4 +6,8 @@ const MarginBottomImage = styled(Image)`
   margin-bottom: 7rem;
 `
 
-export { MarginBottomImage }
+const MarginBottomTopImage = styled(Image)`
+  margin: 1rem 0 4rem 0;
+`
+
+export { MarginBottomImage, MarginBottomTopImage }
