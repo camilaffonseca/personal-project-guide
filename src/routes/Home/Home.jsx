@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
 
 import Title from 'components/Title'
 import Container from 'components/Container'
@@ -6,6 +7,7 @@ import Card from 'components/Card'
 import Text from 'components/Text'
 import Image from 'components/Image'
 import Main from 'components/Main'
+import Subtitle from 'components/Subtitle'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
@@ -14,6 +16,9 @@ import javascriptLogo from 'images/javascript-logo.png'
 const Home = () => {
   return (
     <Main>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Container>
         <StyledImage src={pythonLogo} alt='Python Logo' />
         <StyledImage src={reactLogo} alt='React Logo' />
@@ -37,7 +42,7 @@ const Home = () => {
           “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona nada.”
           &mdash; Mãe
         </Text>
-        <br />
+        <Subtitle>O início de tudo</Subtitle>
         <Text>
           Só comecei a fazer algo útil com essa curiosidade quando, com um interesse absurdo no assunto e um total de
           <span style={{ fontWeight: 600, fontSize: '2.03rem' }}> zero</span> conhecimentos, caí de paraquedas no
@@ -60,10 +65,10 @@ const Home = () => {
           Conforme fui colocando a cabeça no lugar e entendendo como as coisas funcionam, a frustração por saber muito
           pouco foi dando espaço a uma euforia pela possibilidade de aprender mais. Claro, as oscilações são
           inevitáveis, a instabilidade de se jogar em algo novo gera sempre um certo peso pelo excesso de informação, e
-          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez mais como
-          lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
+          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez
+          mais como lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
         </Text>
-        <br />
+        <Subtitle>Hora de inovar</Subtitle>
         <Text>
           Há cinco meses comecei a estudar Python. Já tinha tido algum contato com a linguagem no ano anterior, mas não
           passou de alguns testes simples e teoria, então optei por começar de novo, do zero, de uma forma mais intensa.
@@ -81,7 +86,7 @@ const Home = () => {
           integrar com as minhas habilidades em Python baseando em PWA's, SPA's e integrações com servidores por meio de
           API's.
         </Text>
-        <br />
+        <Subtitle>Objetivo</Subtitle>
         <Text>
           Sobre este projeto, quero fazer aqui algo como um histórico das aplicações desenvolvidas por mim, contando
           também um pouquinho sobre o processo em que tudo isso se deu, e também sendo por si própria uma aplicação
@@ -91,7 +96,7 @@ const Home = () => {
         <Text>
           Neste compilado de aplicações estará tudo que for desenvolvido por mim, das coisas mais simples às mais
           complexas, das mais inexperientes às mais estruturadas, algumas inclusive que ainda estão em desenvolvimento.
-          Ao longo do tempo surgirão outras, que também serão incluidas aqui e assim por diante.
+          Ao longo do tempo surgirão outras, que também serão incluídas aqui e assim por diante.
         </Text>
       </Card>
     </Main>

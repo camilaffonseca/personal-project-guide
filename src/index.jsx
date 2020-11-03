@@ -12,8 +12,6 @@ import 'sanitize.css/forms.css'
 import 'sanitize.css/typography.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 )

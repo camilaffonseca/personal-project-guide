@@ -1,3 +1,3 @@
 export { default } from './Image'
 
-export { MarginBottomImage } from './styles'
+export { MarginBottomImage, MarginBottomTopImage } from './styles'

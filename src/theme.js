@@ -9,12 +9,13 @@ const darkTheme = {
       secondary: '#959da5'
     },
     borders: {
-      primary: '#181a1f'
+      primary: '#181a1f',
+      secondary: '#5b6066'
     },
     scroll: {
       primary: '#3f454c',
       secondary: '#1a2026'
-    },
+    }
   }
 }
 
@@ -29,12 +30,13 @@ const lightTheme = {
       secondary: '#586069'
     },
     borders: {
-      primary: '#e1e4e8'
+      primary: '#cbd0d6',
+      secondary: '#757b82'
     },
     scroll: {
       primary: '#e1e4e8',
       secondary: '#6b747f'
-    },
+    }
   }
 }
 

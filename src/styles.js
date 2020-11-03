@@ -67,12 +67,16 @@ const GlobalStyle = createGlobalStyle`
       opacity ${TRANSITION_TIME}s ease`
         : `
     -o-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
       opacity ${TRANSITION_TIME}s ease-in-out;
     -moz-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
       opacity ${TRANSITION_TIME}s ease-in-out;
     -webkit-transition: transform ${TRANSITION_TIME}s ease-in-out,
+      border-color ${TRANSITION_TIME}s ease-in-out,
       opacity ${TRANSITION_TIME}s ease-in-out;
     transition: transform ${TRANSITION_TIME - 0.2}s ease,
+      border-color ${TRANSITION_TIME}s ease-in-out,
       opacity ${TRANSITION_TIME}s ease;
     `}
   }
@@ -80,6 +84,12 @@ const GlobalStyle = createGlobalStyle`
   *::after,
   *::before {
     box-sizing: border-box;
+  }
+
+  .active-route {
+    ${({ theme }) => theme?.colors?.texts?.primary};
+    opacity: 1;
+    font-weight: 600;
   }
 
   @media (max-width: ${TABLET_BREAKPOINT}px) {
