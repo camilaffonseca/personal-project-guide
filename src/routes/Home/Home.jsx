@@ -20,9 +20,9 @@ const Home = () => {
         <title>Home</title>
       </Helmet>
       <Container>
-        <StyledImage src={pythonLogo} alt='Python Logo' />
-        <StyledImage src={reactLogo} alt='React Logo' />
-        <StyledImage src={javascriptLogo} alt='JavaScript Logo' />
+        <StyledImage disableZoomFunction src={pythonLogo} alt='Python Logo' />
+        <StyledImage disableZoomFunction src={reactLogo} alt='React Logo' />
+        <StyledImage disableZoomFunction src={javascriptLogo} alt='JavaScript Logo' />
       </Container>
       <Card>
         <Title>Guia de Projetos</Title>
