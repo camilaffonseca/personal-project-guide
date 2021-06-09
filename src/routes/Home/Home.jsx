@@ -11,7 +11,11 @@ import Subtitle from 'components/Subtitle'
 
 import pythonLogo from 'images/python-logo.png'
 import reactLogo from 'images/react-logo.png'
+import reactNativeLogo from 'images/react-native-logo.png'
 import javascriptLogo from 'images/javascript-logo.png'
+import typescriptLogo from 'images/typescript-logo.png'
+
+import { DESKTOP_BREAKPOINT } from 'helpers/constants'
 
 const Home = () => {
   return (
@@ -22,14 +26,19 @@ const Home = () => {
       <Container>
         <StyledImage disableZoomFunction src={pythonLogo} alt='Python Logo' />
         <StyledImage disableZoomFunction src={reactLogo} alt='React Logo' />
+        <StyledImage disableZoomFunction src={reactNativeLogo} alt='React Native Logo' />
         <StyledImage disableZoomFunction src={javascriptLogo} alt='JavaScript Logo' />
+        <StyledImage disableZoomFunction src={typescriptLogo} alt='TypeScript Logo' />
       </Container>
       <Card>
-        <Title>Guia de Projetos</Title>
+        <Title>Sobre este ser que vos fala</Title>
+        <Text>Olá pessoa :)</Text>
+        <br />
+        <Text>Bom te ver por aqui &#x1f604;</Text>
+        <br />
         <Text>
-          Não sei exatamente como tu vieste parar aqui, em que dia estamos ou que horas são agora. Mas já que estás
-          aqui, faz um café e perde alguns minutos aqui comigo que nas próximas linhas eu vou te contar um pouco sobre
-          como eu vim parar aqui. &#128522;
+          Faz um café e perde alguns minutos aqui comigo que nas próximas linhas eu vou te contar um pouco sobre como eu
+          vim parar aqui. &#128522;
         </Text>
         <br />
         <Text>
@@ -39,58 +48,62 @@ const Home = () => {
         </Text>
         <br />
         <Text>
-          “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona nada.”
-          &mdash; Mãe
+          “Não dá pra deixar essas coisas na mão dessa guria, ela mexe no que não sabe, depois não funciona.” &mdash;
+          Mãe
         </Text>
         <Subtitle>O início de tudo</Subtitle>
         <Text>
           Só comecei a fazer algo útil com essa curiosidade quando, com um interesse absurdo no assunto e um total de
           <span style={{ fontWeight: 600, fontSize: '2.03rem' }}> zero</span> conhecimentos, caí de paraquedas no
-          desenvolvimento web com o curso da MooDev.
+          desenvolvimento web com o curso da MooDev no final de 2019.
         </Text>
+        <br />
         <Text>
           O curso foi o que me deu um norte, porque até então eu era a pessoa que achava que HTML era linguagem de
-          programação, não sabia da existência do CSS e nem o que o JavaScript fazia com isso tudo.
+          programação e nem fazia ideia de que raios era JavaScript.
         </Text>
         <br />
         <Text>
           Aprendi os fundamentos da web, a base que eu precisava. Fiz alguns projetos toscos com HTML, CSS e JavaScript,
-          que para mim ainda era um bicho de sete cabeças, adquiri uma noção básica de Git e Github, tentei entender e
-          até testei - muito superficialmente - alguns frameworks e bibliotecas. Mas comecei a ter noção de que, apesar
-          de saber absurdamente mais do que antes, eu ainda sabia muito pouco. O sentimento de que estar envolvida nesse
-          meio era algo utópico para mim acabou me segurando muito e não dei continuidade aos estudos por alguns meses.
+          que para mim ainda era um bicho de sete cabeças, adquiri uma noção básica de Git e Github, e até testei - sem
+          muito sucesso - alguns frameworks e bibliotecas.
         </Text>
         <br />
         <Text>
-          Conforme fui colocando a cabeça no lugar e entendendo como as coisas funcionam, a frustração por saber muito
-          pouco foi dando espaço a uma euforia pela possibilidade de aprender mais. Claro, as oscilações são
-          inevitáveis, a instabilidade de se jogar em algo novo gera sempre um certo peso pelo excesso de informação, e
-          estar constantemente nessa posição acaba gerando uma sensação de incapacidade, mas tenho aprendido cada vez
-          mais como lidar com essas oscilações, fazendo assim a chance de desistência cair drásticamente.
+          Mas depois do "node" que o JavaScript deu na minha cabeça precisei de uma trégua. Eu ainda não tinha noção do
+          que podia fazer com JS, nunca tinha visto uma linguagem de programação na vida.
         </Text>
-        <Subtitle>Hora de inovar</Subtitle>
+        <Subtitle>Um pequeno progresso</Subtitle>
         <Text>
-          Há cinco meses comecei a estudar Python. Já tinha tido algum contato com a linguagem no ano anterior, mas não
-          passou de alguns testes simples e teoria, então optei por começar de novo, do zero, de uma forma mais intensa.
-          Comecei pelo básico, e desde então venho estudando a partir de um curso baseado em video-aulas, o qual está
-          quase concluído, e a partir dele, busco me aprofundar em cada detalhe e produzir um conteúdo dedicado e sempre
-          acima do esperado, aplicando conhecimentos adquiridos por meio de outras fontes. Ao final desse curso, tenho
-          pretensão de ainda estudar alguns tópicos pendentes e, posteriormente, iniciar os meus estudos com o framework
-          Django para desenvolvimento web focado em API's restfull, paralelamente à leitura da documentação do Python.
+          Depois de um tempo comecei a estudar Python a partir de um curso. Busquei me aprofundar em cada detalhe e
+          produzir um conteúdo dedicado e sempre acima do esperado, aplicando conhecimentos adquiridos por meio da
+          documentação e de fontes externas.
         </Text>
         <br />
         <Text>
-          Há aproximadamente dois meses, paralelamente ao Python, retomei os estudos em JavaScript com maior foco,
-          revisando conceitos básicos e os fundamentos da linguagem. A partir disso, iniciei os meus estudos em React
-          com o objetivo de conhecimentos em front-end com uma biblioteca consolidada e de uma forma que eu possa
-          integrar com as minhas habilidades em Python baseando em PWA's, SPA's e integrações com servidores por meio de
-          API's.
+          Com a noção de lógica adquirida no Python, estudar JavaScript ficou muito mais tranquilo, então retomei os
+          estudos em JS com maior foco em outubro de 2020, revisando conceitos básicos e os fundamentos da linguagem. A
+          partir disso, iniciei os meus estudos em React com o objetivo de obter conhecimentos em front-end com uma
+          biblioteca consolidada. E foi com a documentação do React que perdi meu medo das documentações, que
+          documentação LINDA.
         </Text>
-        <Subtitle>Objetivo</Subtitle>
+        <br />
         <Text>
-          Sobre este projeto, quero fazer aqui algo como um histórico das aplicações desenvolvidas por mim, contando
-          também um pouquinho sobre o processo em que tudo isso se deu, e também sendo por si própria uma aplicação
-          modelo dos meus estudos em React que tiveram início recentemente.
+          Dois meses depois, em dezembro de 2020, consegui uma oportunidade de estágio na minha empresa atual onde,
+          desde então, tenho me desenvolvido muito.
+        </Text>
+        <Subtitle>Por onde andam meus estudos atualmente?</Subtitle>
+        <Text>
+          No momento meus estudos estão focados basicamente em mobile com React Native. Tenho estudado as documentações,
+          tanto do React como do React Native (que também é lindíssima), as tecnologias complementares mais utilizadas,
+          arquitetura e boas práticas. E paralelamente a isso tenho estudado TypeScript, com ideia de começar a utilizar
+          nos meus projetos.
+        </Text>
+        <Subtitle>Sobre este projeto</Subtitle>
+        <Text>
+          Quero fazer aqui algo como um histórico das aplicações desenvolvidas por mim, contando também um pouquinho
+          sobre o processo em que tudo isso se deu, e também sendo por si própria uma aplicação modelo dos meus estudos
+          em React.
         </Text>
         <br />
         <Text>
@@ -98,17 +111,27 @@ const Home = () => {
           complexas, das mais inexperientes às mais estruturadas, algumas inclusive que ainda estão em desenvolvimento.
           Ao longo do tempo surgirão outras, que também serão incluídas aqui e assim por diante.
         </Text>
+        <br />
+        <Text>
+          <i>
+            (Este projeto foi desenvolvido em dezembro de 2020 com os conhecimentos obtidos até aquele momento, tenho
+            pretensão de refatorar utilizando os conhecimentos adquiridos posteriormente.)
+          </i>
+        </Text>
       </Card>
     </Main>
   )
 }
 
 const StyledImage = styled(Image)`
-  width: calc(15vw + 5rem);
+  width: 10vw;
   max-width: 27vw;
+  object-fit: contain;
+  margin: 0.8rem;
 
-  @media (min-width: 210px) {
+  @media (min-width: ${DESKTOP_BREAKPOINT + 60}px) {
     max-width: 15rem;
+    width: calc(15vw + 5rem);
   }
 `
 

@@ -17,9 +17,7 @@ const NavbarComponent = ({ children, navLinks, currentTheme }) => {
   const location = useLocation()
 
   const linkReducer = (accumulator, currentValue) => {
-    const accumulatorList = accumulator
-    accumulatorList.push(currentValue?.to)
-    return accumulatorList
+    return [...accumulator, currentValue?.to]
   }
 
   const linksRoutes = navLinks.reduce(linkReducer, [])
@@ -197,7 +195,7 @@ const StyledNavContainer = styled.nav`
 const BottomNavButtons = styled.div`
   height: 5.8rem;
   padding-top: 1.8rem;
-  width: 100%;
+  width: calc(100% - 1.8rem);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -215,6 +213,7 @@ const BottomButtonImage = styled.img`
     const lastLink = navLinks[navLinks.length - 1]?.to
 
     const disabled = 'opacity: 0.3;cursor: default;'
+
     if (prev) {
       if (currentPath === firstLink) {
         return disabled

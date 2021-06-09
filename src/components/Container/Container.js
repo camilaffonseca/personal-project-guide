@@ -1,23 +1,21 @@
 import styled from 'styled-components'
 
-import { DESKTOP_BREAKPOINT } from 'helpers/constants'
+import { DESKTOP_BREAKPOINT, TABLET_BREAKPOINT } from 'helpers/constants'
 
 const Container = styled.div`
-  width: 87vw;
-  margin: calc(7.2rem + 15vw) 0 7.2rem 0;
-  max-width: 100vw;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding: 20px;
+  max-width: 1180px;
+  margin: 9rem 0 3rem 0;
 
-  @media (min-width: 210px) {
-    margin: calc(7.2rem + 6rem) 0 7.2rem 0;
-  }
-  @media (min-width: ${DESKTOP_BREAKPOINT}px) {
-    width: calc(53vw + 5rem);
-    max-width: 75rem;
+  @media (min-width: ${TABLET_BREAKPOINT + 200}px) {
+    padding: 0 64px;
   }
   @media (min-width: ${DESKTOP_BREAKPOINT + 300}px) {
-    margin: 7.2rem 0;
+    margin-top: 2rem;
   }
 `
 

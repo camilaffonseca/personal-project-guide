@@ -19,31 +19,41 @@ const pythonCode = `
 from camila.skills import (
   python,
   javascript,
+  typescript,
   react,
+  react-native,
+  nextjs,
   html,
   css
 )
 
 
-class JuniorProgrammer():
+class Programmer():
 
   def __init__(self):
       self.name = 'Camila Furtado da Fonseca'
-      self.age = 17
+      self.age = 18
       self.email = 'camilafonseca.ang7@gmail.com'
 
-      self.city = 'Canguçu'
+      self.city = 'Pelotas'
       self.uf = 'RS'
       self.country = 'BR'
 
   def get_skills(self):
-      skills_set = {
+    skills_set = {
           'programming_languages': [
               python,
               javascript,
           ],
+          'supersets': [
+              typescript,
+          ],
           'libraries': [
               react
+              react-native
+          ],
+          'frameworks': [
+              nextjs
           ],
           'markup_languages': [
               html
@@ -60,10 +70,10 @@ class JuniorProgrammer():
           'MooDev - Escola de Ciência da Computação e Robótica',
           'Udemy - React, Python',
           'Curso em Vídeo - Python',
-  ]
+      ]
 
 
-Camila = JuniorProgrammer()
+Camila = Programmer()
 
 `
 
