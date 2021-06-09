@@ -3,6 +3,7 @@ from camila.skills import (
     javascript,
     typescript,
     react,
+    react_native,
     nextjs,
     html,
     css
@@ -30,7 +31,8 @@ class Programmer():
                 typescript,
             ],
             'libraries': [
-                react
+                react,
+                react_native
             ],
             'frameworks': [
                 nextjs

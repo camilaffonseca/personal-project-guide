@@ -21,7 +21,7 @@ from camila.skills import (
   javascript,
   typescript,
   react,
-  react-native,
+  react_native,
   nextjs,
   html,
   css
@@ -40,7 +40,7 @@ class Programmer():
       self.country = 'BR'
 
   def get_skills(self):
-    skills_set = {
+      skills_set = {
           'programming_languages': [
               python,
               javascript,
@@ -49,8 +49,8 @@ class Programmer():
               typescript,
           ],
           'libraries': [
-              react
-              react-native
+              react,
+              react_native
           ],
           'frameworks': [
               nextjs
